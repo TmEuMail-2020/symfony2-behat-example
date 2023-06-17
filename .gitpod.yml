@@ -3,14 +3,17 @@ tasks:
       docker pull mysql:5.7 
       sudo apt-get update 
       sudo add-apt-repository ppa:ondrej/php -y 
-      sudo apt-get install php5.6-mysql php5.6-curl php5.6-intl 
+      sudo apt-get install php5.6-mysql php5.6-curl php5.6-intl -y
       # must downgrade composer
       composer self-update --2.2
       sudo update-alternatives --set php /usr/bin/php5.6
       composer install
 
+  - before: |
+      # runs for every terminal, not just one, so makes sense to be here
+      sudo update-alternatives --set php /usr/bin/php5.6
   - command: |
-      docker run -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=symfony -d mysql:5.7 && \
+      docker run -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=symfony -d mysql:5.7 
       app/console server:run
 
 jetbrains:

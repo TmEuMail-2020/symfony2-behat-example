@@ -8,6 +8,8 @@ tasks:
       composer self-update --2.2
       sudo update-alternatives --set php /usr/bin/php5.6
       composer install
+      php app/console doctrine:schema:create
+      yes|php app/console doctrine:fixtures:load 
 
   - before: |
       # runs for every terminal, not just one, so makes sense to be here

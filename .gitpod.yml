@@ -1,0 +1,22 @@
+tasks:
+  - init: |
+      docker pull mysql:5.7
+  - command: |
+      sudo apt-get update
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get install php5.6-mysql php5.6-curl php5.6-intl
+      app/console server:run
+
+jetbrains:
+  phpstorm:
+    plugins:
+      - com.intellij.lang.jsgraphql
+      - org.sonarlint.idea
+      # everything git related MUST be on backend
+      - com.github.lppedd.idea-conventional-commit
+      # as of (17-Jun-2023T11-51+0200) - inline blame is not working
+      - zielu.gittoolbox
+
+github:
+  prebuilds:
+    branches: true

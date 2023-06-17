@@ -32,10 +32,10 @@ where _tag_name_ is your `@tag_name` tagged features.
 * API interactive documentation: [http://localhost/symfony2-behat-example/web/app_dev.php/api/doc/](http://localhost/symfony2-behat-example/web/app_dev.php/api/doc/)
 * There are two users:
   
-  Username      | Password      | Role
-  ------------- | ------------- | -------------
-  Greg          | a             | User
-  Katie         | a             | User
+  | Username | Password | Role |
+  |----------|----------|------|
+  | Greg     | a        | User |
+  | Katie    | a        | User |
 
 ### File locations
 

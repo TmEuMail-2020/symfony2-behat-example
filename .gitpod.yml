@@ -1,3 +1,5 @@
+image:
+  joellinn/php:5.6-cli-bullseye
 tasks:
   - init: |
       docker pull mysql:5.7 

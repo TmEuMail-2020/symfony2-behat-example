@@ -18,6 +18,7 @@
           <versions>
             <info id="Local" version="3.4.3" />
             <info id="interpreter-bf356759-888e-453e-b998-668e1596c3cf" version="3.4.3" />
+            <info id="interpreter-cfe56741-3e7b-4c21-9924-580ec9d4324e" version="3.4.3" />
           </versions>
         </cache>
       </tool>

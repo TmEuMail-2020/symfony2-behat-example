@@ -6,8 +6,8 @@ tasks:
       composer install -n
       # strange error "Unable to write in the cache directory (/workspace/symfony2-behat-example/app/cache/dev)"
       sudo chmod 777 app/cache/dev
-      php app/console doctrine:schema:create
-      yes|php app/console doctrine:fixtures:load
+      sudo php app/console doctrine:schema:create
+      sudo yes|php app/console doctrine:fixtures:load
   - command: |
       docker run -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=symfony -d mysql:5.7
       app/console server:run

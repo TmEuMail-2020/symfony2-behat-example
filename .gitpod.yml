@@ -2,7 +2,8 @@ image: tmy2017/gitpod-workspace-full-vnc-php56
 tasks:
   - init: |
       docker pull mysql:5.7
-      composer install
+      # must "no interaction" so that symfony stuff like parameter.yml will not disrupt prebuild process
+      composer install -n
       # strange error "Unable to write in the cache directory (/workspace/symfony2-behat-example/app/cache/dev)"
       sudo chmod 777 app/cache/dev
       php app/console doctrine:schema:create

@@ -8,7 +8,7 @@ tasks:
       sudo chmod -R 777 app/cache/dev
   - command: |
       docker run -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=symfony -d mysql:5.7
-      sleep 3 # seems mysql server starts slow, to avoid "mysql server has gone away error for commands below"
+      sleep 6 # seems mysql server starts slow, to avoid "mysql server has gone away error for commands below"
       php app/console doctrine:schema:create
       yes|php app/console doctrine:fixtures:load
       app/console server:run

@@ -22,6 +22,8 @@ jetbrains:
       - com.github.lppedd.idea-conventional-commit
       # as of (17-Jun-2023T11-51+0200) - inline blame is not working
       - zielu.gittoolbox
+      # must install at backend (30-Jun-2023T07-14+0200) and it works
+      - com.sourcegraph.jetbrains
 
 github:
   prebuilds:
